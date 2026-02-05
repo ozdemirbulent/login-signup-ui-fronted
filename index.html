@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Sign Up</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <button class="tema">Tema Değiştir</button>
+
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <h2>Hesap Oluştur</h2>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>Veya kayıt için e-postanızı kullanın</span>
+          <input type="text" placeholder="Ad Soyad" />
+          <input type="email" placeholder="E-posta" />
+          <input type="password" placeholder="Şifre" />
+          <button type="submit">Hesap Oluştur</button>
+        </form>
+      </div>
+
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h2>Giriş Yap</h2>
+          <div class="social-container">
+            <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+          <span>Hesabınıza giriş yapmak için e-postanızı kullanın</span>
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Şifre" />
+          <a href="#" class="forgot-password" id="forgot-password"
+            >Şifremi Unuttum?</a
+          >
+          <button type="submit">Giriş Yap</button>
+        </form>
+      </div>
+
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h3>Hoşgeldiniz!</h3>
+            <p>Zaten bir hesabınız var mı?</p>
+            <button class="ghost" id="signIn">Giriş Yap</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h3>Merhaba, Arkadaş!</h3>
+            <p>Yeni misiniz? Hemen kayıt olun.</p>
+            <button class="ghost" id="signUp">Kayıt Ol</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalOverlay" class="modal-overlay">
+      <div class="modal-content">
+        <h3>Şifre Sıfırlama</h3>
+        <p>E-posta adresinizi girin, size bir link gönderelim.</p>
+        <input
+          type="email"
+          placeholder="E-posta adresiniz"
+          class="modal-input"
+        />
+        <div class="modal-buttons">
+          <button type="button" id="closeModal" class="cancel-btn">
+            İptal
+          </button>
+          <button type="button" class="send-btn">Gönder</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
