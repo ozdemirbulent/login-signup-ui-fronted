@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="" />
+    <title>Login Form</title>
+  </head>
+  <body>
+    <div class="mainDiv">
+      <h1 class="title">Kayıt Formu</h1>
+      <form id="form" novalidate>
+        <div class="form-group">
+          <label>Ad</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Adınızı Giriniz"
+            required
+            minlength="2"
+            maxlength="20"
+          />
+        </div>
+        <div class="form-group">
+          <label>Soyad</label>
+          <input
+            type="text"
+            id="surname"
+            name="surname"
+            placeholder="Soyadınızı Giriniz"
+            required
+            minlength="2"
+            maxlength="30"
+          />
+        </div>
+        <div class="form-group">
+          <label>E-Mail</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="aaa@gmail.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label>Telefon Numarası</label>
+          <input
+            type="tel"
+            id="Telefon"
+            name="Telefon"
+            placeholder="546-258-65-49"
+            required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          />
+        </div>
+        <div class="form-group">
+          <label>Şifre</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="*******"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+          />
+        </div>
+        <div class="form-group">
+          <label>Şifre Tekrarı</label>
+          <input
+            type="password"
+            id="repassword"
+            name="repassword"
+            placeholder="Şifreyi Tekrarla"
+            required
+            pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
+          />
+        </div>
+        <div class="form-group">
+          <label>Adres</label>
+          <textarea
+            name="adres"
+            id="adres"
+            placeholder="Adresinizi Giriniz"
+            rows="5"
+            cols="30"
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Kaydol</button>
+        <a href="#" class="forgot-password" id="forgot-password"
+          >Şifremi Unuttum?</a
+        >
+
+        <div id="modalOverlay" class="modal-overlay">
+          <div class="modal-content">
+            <div id="closeModal" class="close-modal">×</div>
+            <h3>Şifre Sıfırlama</h3>
+            <p>E-posta adresinizi girin, size bir link gönderelim.</p>
+            <input
+              type="email"
+              placeholder="E-posta adresiniz"
+              class="modal-input"
+            />
+            <div class="modal-buttons">
+              <button type="button" id="closeModal" class="cancel-btn">
+                İptal
+              </button>
+              <button type="button" class="send-btn">Gönder</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="alertMessage" style="display: none">
+        <h3 id="alertTitle" class="alertTitle">
+          Lütfen Tüm Alanları Doldurunuz
+        </h3>
+      </div>
+    </div>
+    <script src="js.js"></script>
+  </body>
+</html>
